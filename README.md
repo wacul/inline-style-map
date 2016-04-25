@@ -5,7 +5,7 @@ Retrieves inline style declarations from CSS rules.
 ## Usage 
 
 ```js
-const InlineStyleMap = require('inline-style-map')
+const InlineStyleMap = require('inline-style-map').InlineStyleMap;
 const map = new InlineStyleMap(`
   a.hoge {
     color: blue;
@@ -16,7 +16,7 @@ const map = new InlineStyleMap(`
   }
 `);
 
-console.log(map.loopup({
+console.log(map.lookup({
   elementName: 'a',
   classNames: ['hoge', 'foo']
 }));
